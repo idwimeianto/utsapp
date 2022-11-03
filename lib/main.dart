@@ -42,6 +42,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Container(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Email'),
                             LoginForm(),
@@ -104,6 +105,7 @@ class _LoginFormState extends State<LoginForm> {
                   color: Color.fromARGB(255, 206, 212, 218),
                 ),
               ),
+              hintText: "Email Anda",
             ),
           ),
           Row(
