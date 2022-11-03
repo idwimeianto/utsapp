@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utsapp/register/register.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({
@@ -127,7 +128,13 @@ class _LoginFormState extends State<LoginForm> {
               ),
               Expanded(
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => RegisterScreen(),
+                      ),
+                    );
+                  },
                   child: const Text('Daftar'),
                 ),
               ),
