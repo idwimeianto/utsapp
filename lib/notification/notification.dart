@@ -11,7 +11,9 @@ class NotificationScreen extends StatelessWidget {
         title: Text('Notifikasi'),
         automaticallyImplyLeading: false,
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(
+        index: 1,
+      ),
     );
   }
 }

@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/
     - assets/hero.png
+    - assets/blank-profile.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

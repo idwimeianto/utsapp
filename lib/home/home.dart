@@ -13,7 +13,9 @@ class HomeScreen extends StatelessWidget {
         title: Text('Beranda'),
         automaticallyImplyLeading: false,
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(
+        index: 0,
+      ),
     );
   }
 }

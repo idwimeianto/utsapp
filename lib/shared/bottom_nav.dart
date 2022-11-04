@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
+  const BottomNavBar({Key? key, required this.index}) : super(key: key);
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      currentIndex: index,
       type: BottomNavigationBarType.fixed,
       items: const [
         BottomNavigationBarItem(

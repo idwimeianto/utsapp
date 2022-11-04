@@ -11,7 +11,9 @@ class NewsScreen extends StatelessWidget {
         title: Text('Berita'),
         automaticallyImplyLeading: false,
       ),
-      bottomNavigationBar: const BottomNavBar(),
+      bottomNavigationBar: const BottomNavBar(
+        index: 2,
+      ),
     );
   }
 }
