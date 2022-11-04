@@ -22,6 +22,7 @@ class AccountEditScreen extends StatelessWidget {
                   image: AssetImage('assets/blank-profile.png'),
                 ),
               ),
+              margin: EdgeInsets.only(bottom: 40),
             ),
             AccountEditForm(),
           ],
@@ -48,95 +49,120 @@ class _AccountEditFormState extends State<AccountEditForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Nama*'),
-              TextFormField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color.fromARGB(255, 206, 212, 218),
-                    ),
-                  ),
-                  hintText: "Nama",
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Text('Nama*'),
                 ),
-              ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Email*'),
-              TextFormField(
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      width: 1,
-                      color: Color.fromARGB(255, 206, 212, 218),
-                    ),
-                  ),
-                  hintText: "Email",
-                ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  children: [
-                    Text('Tempat Lahir (optional)*'),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            width: 1,
-                            color: Color.fromARGB(255, 206, 212, 218),
-                          ),
-                        ),
-                        hintText: "Kota/Kabupaten",
+                TextFormField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 206, 212, 218),
                       ),
                     ),
-                  ],
+                    hintText: "Nama",
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Expanded(
-                child: Column(
-                  children: [
-                    Text('Tanggal Lahir (Optional)'),
-                    TextFormField(
-                      decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                            width: 1,
-                            color: Color.fromARGB(255, 206, 212, 218),
-                          ),
-                        ),
-                        hintText: "00/00/0000",
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: const Size.fromHeight(50), // NEW
+              ],
             ),
-            onPressed: () {
-              Navigator.pushNamedAndRemoveUntil(
-                context,
-                '/account',
-                (_) => false,
-              );
-            },
-            child: const Text('Simpan'),
+          ),
+          Container(
+            margin: EdgeInsets.only(bottom: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(bottom: 10),
+                  child: Text('Email*'),
+                ),
+                TextFormField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        width: 1,
+                        color: Color.fromARGB(255, 206, 212, 218),
+                      ),
+                    ),
+                    hintText: "Email",
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        child: Text('Tempat Lahir (optional)'),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: Color.fromARGB(255, 206, 212, 218),
+                            ),
+                          ),
+                          hintText: "Kota/Kabupaten",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(bottom: 10),
+                        child: Text('Tanggal Lahir (Optional)'),
+                      ),
+                      TextFormField(
+                        decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                              width: 1,
+                              color: Color.fromARGB(255, 206, 212, 218),
+                            ),
+                          ),
+                          hintText: "00/00/0000",
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(top: 40),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(50), // NEW
+              ),
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  '/account',
+                  (_) => false,
+                );
+              },
+              child: const Text('Simpan'),
+            ),
           ),
         ],
       ),
