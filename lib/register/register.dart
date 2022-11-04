@@ -159,7 +159,9 @@ class _LoginFormState extends State<LoginForm> {
             style: ElevatedButton.styleFrom(
               minimumSize: const Size.fromHeight(50), // NEW
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamedAndRemoveUntil(context, '/home', (_) => false);
+            },
             child: const Text('Proses'),
           ),
         ],

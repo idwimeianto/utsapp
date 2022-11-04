@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utsapp/home/home.dart';
 import 'package:utsapp/register/register.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -111,14 +112,7 @@ class _LoginFormState extends State<LoginForm> {
               Expanded(
                 child: ElevatedButton(
                   onPressed: () {
-                    // Validate returns true if the form is valid, or false otherwise.
-                    // if (_formKey.currentState!.validate()) {
-                    //   // If the form is valid, display a snackbar. In the real world,
-                    //   // you'd often call a server or save the information in a database.
-                    //   ScaffoldMessenger.of(context).showSnackBar(
-                    //     const SnackBar(content: Text('Processing Data')),
-                    //   );
-                    // }
+                    Navigator.of(context).pushNamed('/home');
                   },
                   child: const Text('Masuk'),
                 ),
