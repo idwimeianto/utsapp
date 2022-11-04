@@ -260,7 +260,7 @@ class _GenderRadioState extends State<GenderRadio> {
   }
 }
 
-enum Agreement { agree }
+enum Agreement { agree, notselected }
 
 class AgreementRadio extends StatefulWidget {
   const AgreementRadio({super.key});
@@ -270,7 +270,7 @@ class AgreementRadio extends StatefulWidget {
 }
 
 class _AgreementRadioState extends State<AgreementRadio> {
-  Agreement? _value = Agreement.agree;
+  Agreement? _value = Agreement.notselected;
 
   @override
   Widget build(BuildContext context) {
