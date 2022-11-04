@@ -67,7 +67,7 @@ flutter:
 
   assets:
     - assets/
-    - assets/hero.png
+    - assets/logo.jpeg
     - assets/blank-profile.png
 
 

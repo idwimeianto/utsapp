@@ -27,28 +27,34 @@ class LoginScreen extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(40),
                       child: FittedBox(
-                        child: Image.asset('assets/hero.png'),
+                        child: Image.asset('assets/logo.jpeg'),
                         fit: BoxFit.fill,
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.only(bottom: 20),
                       child: Column(
                         children: [
                           Text('Selamat Datang'),
-                          Text('di Aplikasi MAL SKA Membership'),
+                          Text('di OnlyRecipe Membership'),
                         ],
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.only(bottom: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Email'),
+                          Container(
+                            margin: EdgeInsets.only(bottom: 10),
+                            child: Text('Email'),
+                          ),
                           LoginForm(),
                         ],
                       ),
                     ),
                     Container(
+                      margin: EdgeInsets.only(top: 10),
                       child: Text(
                           'Dengan Memakai aplikasi ini saya setudu dengan Persyaratan Layanan dan Kebijakan Pribadi'),
                     ),
@@ -57,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('SKA MALL Mobile 2021'),
+                        Text('OnlyRecipe Mobile 2021'),
                       ],
                     ),
                   ],
@@ -88,22 +94,18 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextFormField(
-            // The validator receives the text that the user has entered.
-            // validator: (value) {
-            //   if (value == null || value.isEmpty) {
-            //     return 'Please enter some text';
-            //   }
-            //   return null;
-            // },
-            decoration: InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  width: 1,
-                  color: Color.fromARGB(255, 206, 212, 218),
+          Container(
+            margin: EdgeInsets.only(bottom: 20),
+            child: TextFormField(
+              decoration: InputDecoration(
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 1,
+                    color: Color.fromARGB(255, 206, 212, 218),
+                  ),
                 ),
+                hintText: "Email Anda",
               ),
-              hintText: "Email Anda",
             ),
           ),
           Row(
