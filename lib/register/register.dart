@@ -15,7 +15,7 @@ class RegisterScreen extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.all(30),
-            child: LoginForm(),
+            child: RegisterForm(),
           ),
         ],
       ),
@@ -23,14 +23,14 @@ class RegisterScreen extends StatelessWidget {
   }
 }
 
-class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+class RegisterForm extends StatefulWidget {
+  const RegisterForm({super.key});
 
   @override
-  State<LoginForm> createState() => _LoginFormState();
+  State<RegisterForm> createState() => _RegisterFormState();
 }
 
-class _LoginFormState extends State<LoginForm> {
+class _RegisterFormState extends State<RegisterForm> {
   final _formKey = GlobalKey<FormState>();
 
   @override

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:utsapp/account/account_edit.dart';
 import 'package:utsapp/shared/bottom_nav.dart';
 
 class AccountScreen extends StatelessWidget {
@@ -39,7 +40,14 @@ class AccountScreen extends StatelessWidget {
                       foregroundColor: Colors.white,
                     ),
                     child: Icon(FontAwesomeIcons.penToSquare),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              AccountEditScreen(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
